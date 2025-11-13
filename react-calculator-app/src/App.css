@@ -1,0 +1,37 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.calculator {
+  transform: scale(1.5); /* ★ 電卓全体を1.5倍に拡大 */
+  transform-origin: top ; /* 拡大の基準点（上） */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 264px;
+}
+
+.calculator-container {
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  height: 24px;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.calculator-container::-webkit-scrollbar {
+  display: none;             /* スクロールバー非表示 */
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px); /* 列の定義: 4列、各列の幅60px */
+  gap: 8px; /* グリッド間の隙間 */
+}
+
+button {
+  background-color: lightblue;
+}
