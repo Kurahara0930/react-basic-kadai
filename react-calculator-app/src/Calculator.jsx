@@ -11,13 +11,16 @@ export function Calculator() {
         '7', '8', '9', '/',
         '4', '5', '6', '*',
         '1', '2', '3', '-',
-        '0', 'C', '=', '+'
+        '0', 'C', '=', '+',
+        ' ', '←', ' ', ' '
     ];
 
     const handleClick = (btn) => {
         if (btn == 'C') {
             // 表示をクリアする
             setDisplay('');
+        } else if (btn === '←') {
+            setDisplay((prev) => prev.slice(0, -1));
         } else if (btn === '=') {
             // 計算を実行する
             try {
@@ -83,4 +86,5 @@ export function Calculator() {
             </div>
         </div>
     )
+
 }
